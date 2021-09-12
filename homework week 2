@@ -1,0 +1,11 @@
+import numpy as np
+
+points = (np.random.randn(50, 2) * 0.75) + np.array([1, 0])
+points[:5, :]
+
+
+# returns k centroid from initial points
+def initialize_centroids(points, k):
+    centroids = points.copy()
+    np.random.shuffle(centroids)
+    return centroids[:k]
